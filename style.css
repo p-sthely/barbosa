@@ -1,0 +1,108 @@
+/**
+*=======================================================
+* Debug
+*=======================================================
+*/
+
+/* some debug code here */
+
+/**
+*=======================================================
+* Components
+*=======================================================
+*/
+
+/**
+* .btn-dark
+****************************
+*/
+
+.btn-dark {
+  border-radius: 0;
+  background-color: var(--bs-gray);
+}
+
+/**
+* .btn-light
+****************************
+*/
+
+.btn-light {
+  border-radius: 0;
+  background-color: var(--bs-light);
+}
+
+/**
+* .container-xxl
+****************************
+*/
+
+/*  Redefine the max-width of the container-xxl
+    to match the xxl breakpoint, so the container
+    doesn't size down (!?) */
+@media (min-width: 1400px) {
+  .container-xxl { max-width: 1400px; }
+}
+
+/**
+* .navbar
+****************************
+*/
+
+/**
+* .navbar-collapse
+------------------
+*/
+
+/*  The navbar-collapse element doesn't use all the space,
+    so it is naturally aligned on the right for large screens */
+.navbar-collapse { flex-grow: 0; }
+
+/**
+* .social-nav-links
+-------------------
+*/
+
+/*  The social-nav-links list is displayed in a row layout,
+    even when the navbar collapses */
+.social-nav-links { flex-direction: row; }
+
+/*  Add more space around the social-nav-links list when
+    the navbar-nav is not collapsed */
+@media (min-width: 992px) {
+  .social-nav-links {
+    margin-left: 1rem! important;
+    margin-right: 1rem! important;
+  }
+}
+
+/*  The social-nav-links elements are equally spaced
+    on the collapsed navbar */
+.social-nav-links .nav-link { padding-right: 1rem; }
+
+/**
+*=======================================================
+* Modifiers
+*=======================================================
+*/
+
+@media (max-width: 576px) {
+  .row>* {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+/**
+*=======================================================
+* Utilities (cu = custom utility)
+*=======================================================
+*/
+
+
+@media (min-width: 768px) {
+  /*  Set a 50% width on the medium breakpoint */
+  .cu-w-md-50 { width: 50%; }
+}
+
